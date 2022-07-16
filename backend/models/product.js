@@ -5,7 +5,6 @@ let mongoose = require('mongoose');
 // Create a model class
 let productModel = mongoose.Schema(
     {
-        id: String,
         name: String,
         description: String,
         amount: Number,

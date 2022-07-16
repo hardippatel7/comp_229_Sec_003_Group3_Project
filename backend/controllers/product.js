@@ -14,7 +14,7 @@ module.exports.productList = function(req, res, next) {
             res.render('products/list', {
                 title: 'Products List', 
                 ProductsList: productsList,
-            })            
+            })
         }
     });
 }
