@@ -38,3 +38,39 @@ module.exports.addProduct = (req, res, next) => {
       });
     });
 }
+
+// Updates a product based on its id.
+module.exports.updateProduct = (req, res, next) => {
+    const id = req.params.id;
+    ProductModel.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Product not found. Product id : ${id}`,
+        });
+      } else {
+        res.redirect('../list');
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({ message: "Error occurred while updating product information" });
+    });
+}
+
+// Deletes a product based on its id.
+module.exports.deleteProduct = (req, res, next) => {
+    const id = req.params.id;
+    ProductModel.findByIdAndDelete(id)
+    .then((data) => {
+        if (!data) {
+            res.redirect('/')
+          }else {
+            res.redirect('../list');
+          }
+    })
+    .catch((err) => {
+        res.status(500).send({
+          message: "Error occurred while deleting the product. Product id : " + id,
+        });
+      });
+};
