@@ -5,6 +5,7 @@
 
  var configDB = require('./config/db');
  var app = require('./config/app');
+ var express = require('express');
  var debug = require('debug')('comp229.003.m2022:server');
  var http = require('http');
  const cors = require('cors')
@@ -12,16 +13,17 @@
     origin: "http://localhost:4200"
  }
  app.use(cors(corsOptions));
- 
+
  /**
   * Get port from environment and store in Express.
   */
- 
+
  var db = configDB();
  var port = normalizePort(process.env.PORT || '3000');
  app.set('port', port);
- 
- /**
+ app.use( express.static( "public" ) );
+
+/**
   * Create HTTP server.
   */
  

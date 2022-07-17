@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3841c0d5-d2b8-4d45-8609-a106ca25f137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/product/product.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/product/product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +78,7 @@
       <workItem from="1657991344550" duration="7126000" />
       <workItem from="1658006001229" duration="2529000" />
       <workItem from="1658012580404" duration="1336000" />
+      <workItem from="1658080651457" duration="4040000" />
     </task>
     <servers />
   </component>
