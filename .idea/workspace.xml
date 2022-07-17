@@ -8,10 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/landing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/product/product.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/product/product.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
