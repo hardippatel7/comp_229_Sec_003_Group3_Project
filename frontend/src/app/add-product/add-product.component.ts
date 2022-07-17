@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import {FormsModule, NgForm} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -9,12 +10,13 @@ import {FormsModule, NgForm} from '@angular/forms';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor(public productService: ProductService) { }
+  constructor(public productService: ProductService, public router: Router) { }
 
   ngOnInit(): void {
   }
 
   addData(value: any) {
+    console.log(value.value);
     let body = {
       name: value.name,
       description: value.desc,
@@ -25,6 +27,7 @@ export class AddProductComponent implements OnInit {
     this.productService.createProduct(body)
       .subscribe(response => {
         console.log(response)
+        this.router.navigate(["/"]);
       })
   }
 }
