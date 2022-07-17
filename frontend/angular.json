@@ -75,10 +75,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "comp_229_Sec_003_Group3_Project:build:production"
+              "browserTarget": "comp_229_Sec_003_Group3_Project:build:production",
+              "proxyConfig": "src/proxy.config.json"
             },
             "development": {
-              "browserTarget": "comp_229_Sec_003_Group3_Project:build:development"
+              "browserTarget": "comp_229_Sec_003_Group3_Project:build:development",
+              "proxyConfig": "src/proxy.config.json"
             }
           },
           "defaultConfiguration": "development"

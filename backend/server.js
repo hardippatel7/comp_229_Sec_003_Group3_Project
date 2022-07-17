@@ -12,8 +12,10 @@
  var corsOptions = {
     origin: "http://localhost:4200"
  }
- app.use(cors(corsOptions));
-
+ app.use(cors());
+app.get('/',(req,res)=>{
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
+})
  /**
   * Get port from environment and store in Express.
   */
