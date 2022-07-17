@@ -7,6 +7,11 @@
  var app = require('./config/app');
  var debug = require('debug')('comp229.003.m2022:server');
  var http = require('http');
+ const cors = require('cors')
+ var corsOptions = {
+    origin: "http://localhost:4200"
+ }
+ app.use(cors(corsOptions));
  
  /**
   * Get port from environment and store in Express.
