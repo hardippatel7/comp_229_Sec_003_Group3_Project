@@ -4,17 +4,14 @@ let ProductModel = require('../models/product');
 // Gets all products from the Database and renders the page to list them all.
 module.exports.productList = function(req, res, next) {  
     ProductModel.find((err, productsList) => {
-    //    console.log(productList);
+        console.log(productsList);
         if(err)
         {
             return console.error(err);
         }
         else
         {
-            res.render('products/list', {
-                title: 'Products List', 
-                ProductsList: productsList,
-            })
+            res.send(productsList)
         }
     });
 }
@@ -28,7 +25,7 @@ module.exports.addProduct = (req, res, next) => {
         status: req.body.status
       });
       product.save(product).then((data) => {
-      res.redirect("list");
+      res.status(200).send(data);
     })
     .catch((err) => {
       res.status(500).send({
@@ -49,7 +46,7 @@ module.exports.updateProduct = (req, res, next) => {
           message: `Product not found. Product id : ${id}`,
         });
       } else {
-        res.redirect('../list');
+        res.send(data).status(200);
       }
     })
     .catch((err) => {
@@ -63,9 +60,9 @@ module.exports.deleteProduct = (req, res, next) => {
     ProductModel.findByIdAndDelete(id)
     .then((data) => {
         if (!data) {
-            res.redirect('/')
+            res.status(404).res("no data found");
           }else {
-            res.redirect('../list');
+            res.send(req.id);
           }
     })
     .catch((err) => {
