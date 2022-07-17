@@ -10,6 +10,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,8 +26,10 @@ import { AddProductComponent } from './add-product/add-product.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HeaderModule
+    HeaderModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

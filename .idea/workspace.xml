@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3841c0d5-d2b8-4d45-8609-a106ca25f137" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/product/product.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/add-product/add-product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/landing.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/product/product.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
