@@ -1,15 +1,21 @@
 <div *ngFor="let product of productList">
-  <div class="card justify-content-center m-4 align-center" style="width:300px">
-    <div class="card-body">
-      <div class="d-flex justify-content-between">
-        <h4 class="card-title">{{product.name}}</h4>
-        <span (click)="onTaskClick(product)"><i class="fa fa-pencil"></i></span>
-        <span (click)="deleteTask(product)"><i class="fa fa-trash"></i></span>
+  <div class="card justify-content-center m-4 align-center">
+    <div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h4 class="card-title">{{product.name}}</h4>
+          <div class="justify-content-end">
+            <span class="m-2" (click)="onTaskClick(product)"><i class="fa fa-pencil"></i></span>
+            <span class="m-2" (click)="deleteTask(product)"><i class="fa fa-trash"></i></span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="card-text">{{product.description}}
+            </p>
+          <span class="m-2 justify-content-end">${{product.amount }}</span>
+        </div>
+        <a href="#" class="btn btn-primary">Buy</a>
       </div>
-      <div class="d-flex">
-        <p class="card-text">{{product.description}}<span class="align-content-center">{{product.amount}}</span></p>
-      </div>
-      <a href="#" class="btn btn-primary">Buy</a>
     </div>
   </div>
 </div>
