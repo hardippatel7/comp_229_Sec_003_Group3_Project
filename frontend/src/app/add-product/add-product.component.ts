@@ -19,7 +19,7 @@ export class AddProductComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     if(this.id) {
       this.isEdit = true;
-      this.btnName = 'Edit';
+      this.btnName = 'Update';
     } else {
       this.isEdit = false;
       this.btnName = 'Save';
