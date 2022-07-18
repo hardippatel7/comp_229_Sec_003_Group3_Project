@@ -15,15 +15,15 @@ export class ProductService {
     return this.http.get(`${this.baseUrl}/list`);
   }
 
-  createProduct(product: Object): Observable<Object> {
+  createProduct(product: any): Observable<Object> {
     return this.http.post(`${this.baseUrl}/add `, product);
   }
 
-  updateProduct(id: number, value: any): Observable<Object> {
+  updateProduct(id: string, value: any): Observable<Object> {
     return this.http.put(`${this.baseUrl}/edit/${id}`, value);
   }
 
   deleteProduct(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}${id}`, { responseType: 'text' });
+    return this.http.delete(`${this.baseUrl}/delete/${id}`, { responseType: 'text' });
   }
 }
