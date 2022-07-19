@@ -3,7 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "comp_229_Sec_003_Group3_Project": {
     "frontend": {
       "projectType": "application",
       "schematics": {
