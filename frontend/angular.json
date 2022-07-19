@@ -4,13 +4,33 @@
   "newProjectRoot": "projects",
   "projects": {
     "comp_229_Sec_003_Group3_Project": {
+    "frontend": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
+        "@schematics/angular:class": {
+          "skipTests": true
         },
-        "@schematics/angular:application": {
-          "strict": true
+        "@schematics/angular:component": {
+          "style" : "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -75,12 +95,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "comp_229_Sec_003_Group3_Project:build:production",
-              "proxyConfig": "src/proxy.config.json"
+              "browserTarget": "frontend:build:production"
             },
             "development": {
-              "browserTarget": "comp_229_Sec_003_Group3_Project:build:development",
-              "proxyConfig": "src/proxy.config.json"
+              "browserTarget": "frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -112,5 +130,7 @@
       }
     }
   },
-  "defaultProject": "comp_229_Sec_003_Group3_Project"
+  "cli": {
+    "analytics": "5dc63e1f-621a-4299-8a19-19d9c3432343"
+  }
 }
