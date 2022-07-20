@@ -8,7 +8,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class ProductService {
   readonly baseUrl;
   constructor(public http: HttpClient ) {
-    this.baseUrl = "http://localhost:3000/products";
+    this.baseUrl = "https://comp229sec003group3backend.herokuapp.com/products";
   }
 
   getProductList(): Observable<any> {
