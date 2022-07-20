@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3841c0d5-d2b8-4d45-8609-a106ca25f137" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.angular/cache/13.3.8/angular-webpack/8a768ec454b6c9d1da53b9058779fe9e5adb718f/1.pack" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.angular/cache/13.3.8/angular-webpack/8a768ec454b6c9d1da53b9058779fe9e5adb718f/2.pack" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.angular/cache/13.3.8/angular-webpack/8a768ec454b6c9d1da53b9058779fe9e5adb718f/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/13.3.8/angular-webpack/8a768ec454b6c9d1da53b9058779fe9e5adb718f/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/13.3.8/angular-webpack/8a768ec454b6c9d1da53b9058779fe9e5adb718f/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/13.3.8/angular-webpack/8a768ec454b6c9d1da53b9058779fe9e5adb718f/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/13.3.8/angular-webpack/8a768ec454b6c9d1da53b9058779fe9e5adb718f/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +87,7 @@
       <workItem from="1658080651457" duration="4040000" />
       <workItem from="1658111796724" duration="2173000" />
       <workItem from="1658286723711" duration="964000" />
-      <workItem from="1658289695744" duration="653000" />
+      <workItem from="1658289695744" duration="929000" />
     </task>
     <servers />
   </component>
