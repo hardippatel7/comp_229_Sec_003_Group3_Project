@@ -12,6 +12,12 @@ import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistrationComponent } from './auth/registration/registration.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 
 @NgModule({
@@ -22,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     AboutComponent,
     ProductComponent,
-    AddProductComponent
+    AddProductComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +38,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HeaderModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
