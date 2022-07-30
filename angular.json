@@ -3,13 +3,14 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "InventoryFrontend": {
+    "frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
           "skipTests": true
         },
         "@schematics/angular:component": {
+          "style" : "scss",
           "skipTests": true
         },
         "@schematics/angular:directive": {
@@ -38,22 +39,22 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/inventory-frontend",
+            "outputPath": "dist/frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -93,10 +94,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "InventoryFrontend:build:production"
+              "browserTarget": "frontend:build:production"
             },
             "development": {
-              "browserTarget": "InventoryFrontend:build:development"
+              "browserTarget": "frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,7 +105,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "InventoryFrontend:build"
+            "browserTarget": "frontend:build"
           }
         },
         "test": {
@@ -114,12 +115,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -128,6 +130,6 @@
     }
   },
   "cli": {
-    "analytics": "c7ada1ca-9c4e-42b2-8968-4e2b10b81c32"
+    "analytics": "5dc63e1f-621a-4299-8a19-19d9c3432343"
   }
 }
