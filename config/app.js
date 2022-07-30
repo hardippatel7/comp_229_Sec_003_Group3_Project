@@ -19,6 +19,7 @@ app.options('*', cors());
 
 
 let productsRouter = require('../routes/product');
+let usersRouter = require('../routes/user');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -27,4 +28,5 @@ app.use(express.urlencoded({ extended: false }));
 // app.use(express.static(path.join(__dirname, '../node_modules')));
 
 app.use('/products', productsRouter);
+app.use('/users', usersRouter);
 module.exports = app;
