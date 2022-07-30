@@ -16,6 +16,21 @@ module.exports.productList = function(req, res, next) {
     });
 }
 
+
+// Gets all products from the Database and renders the page to list them all.
+module.exports.getOneProduct = function(req, res, next) {  
+  const id = req.params.id;
+  ProductModel.findById(id).then((data) => {
+    if (!data) {
+      res.status(404).send({
+        message: `Product not found. Product id : ${id}`,
+      });
+    } else {
+      res.send(data).status(200);
+    }
+  });
+}
+
 // Processes the data submitted from the Add form to add a new product
 module.exports.addProduct = (req, res, next) => {
     const product = new ProductModel({
