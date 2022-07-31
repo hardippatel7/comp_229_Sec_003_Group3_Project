@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3841c0d5-d2b8-4d45-8609-a106ca25f137" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth/auth-guard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/auth-guard.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth/registration/registration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/registration/registration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/product/product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,7 @@
       <workItem from="1659205988231" duration="654000" />
       <workItem from="1659206669104" duration="8109000" />
       <workItem from="1659216503087" duration="6446000" />
-      <workItem from="1659287638706" duration="6403000" />
+      <workItem from="1659287638706" duration="7925000" />
     </task>
     <servers />
   </component>
