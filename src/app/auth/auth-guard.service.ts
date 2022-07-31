@@ -19,7 +19,8 @@ export class AuthGuardService {
     if(localStorage.getItem("SessionUser"))
       return true;
     else
-      return false}
+      return false
+  }
 
   createUser(user: any): Observable<Object> {
     return this.http.post(`${this.baseUrl}/register `, user);

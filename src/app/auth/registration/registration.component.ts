@@ -16,15 +16,14 @@ export class RegistrationComponent implements OnInit {
 
   addData(formData: any) {
     let body = {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      email: formData.email,
-      password: formData.password
+      firstName: formData.value.firstName,
+      lastName: formData.value.lastName,
+      email: formData.value.email,
+      password: formData.value.password
     }
     this.authService.createUser(body)
       .subscribe(response => {
-        console.log(response)
-        this.router.navigate(["/"]);
+        this.router.navigate(["/login"]);
       })
   }
 }

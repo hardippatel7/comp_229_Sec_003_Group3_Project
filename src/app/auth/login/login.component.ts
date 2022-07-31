@@ -11,7 +11,9 @@ export class LoginComponent implements OnInit {
   email : string ="";
   password : string ="";
   show: boolean= false;
-  user: any = "nisha";
+  user: any = "";
+  showError: boolean = false;
+  errorMsg: string = "";
   constructor(public router: Router, public authService: AuthGuardService) { }
 
   ngOnInit(): void {
@@ -19,13 +21,18 @@ export class LoginComponent implements OnInit {
 
   submit(formData: any) {
     let body = {
-      email: formData.email,
-      password: formData.password
+      username: formData.value.email,
+      password: formData.value.password
     }
     this.authService.login(body)
-      .subscribe(response => {
-        this.authService.settoken(this.user);
-        this.router.navigate(["/"]);
+      .subscribe((response: any) => {
+        if(response) {
+          this.authService.settoken(response?.token);
+          this.router.navigate(["/"]);
+          this.showError = false;
+        } else {
+          this.showError = true;
+        }
       })
   }
 

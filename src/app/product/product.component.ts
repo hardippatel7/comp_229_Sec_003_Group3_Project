@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthGuardService } from '../auth/auth-guard.service';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductComponent implements OnInit {
   productList: any;
-  constructor(public productService: ProductService, public router: Router) { }
+  constructor(public productService: ProductService, public router: Router, public authService: AuthGuardService) { }
 
   ngOnInit(): void {
     this.ongetTaskList();
@@ -26,9 +27,14 @@ export class ProductComponent implements OnInit {
   }
 
   deleteTask(product: any) {
-    this.productService.deleteProduct(product._id).subscribe((res) =>  {
-      this.ongetTaskList();
-    })
+    if(this.authService.gettoken()) {
+      this.productService.deleteProduct(product._id).subscribe((res) =>  {
+        this.ongetTaskList();
+      })
+    } else {
+      this.router.navigate(["/login"]);
+    }
+
   }
 
 }
