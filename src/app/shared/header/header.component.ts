@@ -7,6 +7,7 @@ import { AuthGuardService } from 'src/app/auth/auth-guard.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit, AfterViewInit {
   isUserLogin: boolean = false;
   constructor(public authService: AuthGuardService, public router: Router, public ref: ChangeDetectorRef) {
@@ -27,5 +28,4 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.authService.settoken("");
     this.isUserLogin = false;
   }
-
 }
