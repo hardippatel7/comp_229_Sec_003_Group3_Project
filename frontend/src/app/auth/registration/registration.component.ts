@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthGuardService} from "../auth-guard.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registration',
@@ -7,17 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthGuardService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   addData(formData: any) {
     let body = {
-      firstname: formData.firstname,
-      lastname: formData.lastname,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
       email: formData.email,
       password: formData.password
     }
+    this.authService.createUser(body)
+      .subscribe(response => {
+        console.log(response)
+        this.router.navigate(["/"]);
+      })
   }
 }
