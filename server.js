@@ -8,6 +8,7 @@
  var express = require('express');
  var debug = require('debug')('comp229.003.m2022:server');
  var http = require('http');
+ var passportConfig = require('./config/local');
  const cors = require('cors')
  var corsOptions = {
     origin: "http://localhost:4200"
@@ -25,12 +26,14 @@ app.get('/',(req,res)=>{
  app.set('port', port);
  app.use( express.static( "public" ) );
 
+
 /**
   * Create HTTP server.
   */
  
  var server = http.createServer(app);
  
+ let passport = passportConfig();
  /**
   * Listen on provided port, on all network interfaces.
   */
