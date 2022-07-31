@@ -12,16 +12,20 @@ export class AuthGuardService {
   constructor(public http: HttpClient) { this.baseUrl = "https://comp229sec003group3backend.herokuapp.com/users"; }
 
   settoken(data: any){
-    this.userSubject.next(localStorage.setItem("SeesionUser", data));
+    this.userSubject.next(localStorage.setItem("SessionUser", data));
   }
 
   gettoken() {
-    if(localStorage.getItem("SeesionUser"))
+    if(localStorage.getItem("SessionUser"))
       return true;
     else
       return false}
 
-  createUser(product: any): Observable<Object> {
-    return this.http.post(`${this.baseUrl}/register `, product);
+  createUser(user: any): Observable<Object> {
+    return this.http.post(`${this.baseUrl}/register `, user);
+  }
+
+  login(user: any): Observable<Object> {
+    return this.http.post(`${this.baseUrl}/login `, user);
   }
 }

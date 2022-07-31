@@ -17,9 +17,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit() {
-    this.authService.settoken(this.user);
-    this.router.navigate(["/"]);
+  submit(formData: any) {
+    let body = {
+      email: formData.email,
+      password: formData.password
+    }
+    this.authService.login(body)
+      .subscribe(response => {
+        this.authService.settoken(this.user);
+        this.router.navigate(["/"]);
+      })
   }
 
 }
