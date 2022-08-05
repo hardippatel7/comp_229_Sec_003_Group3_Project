@@ -4,6 +4,8 @@
     <a routerLink="/">Home</a>
     <a routerLink="contact">Contact</a>
     <a routerLink="about">About</a>
+    <a *ngIf="!isUserLogin" routerLink="login">Login</a>
+    <a *ngIf="isUserLogin" (click)="onLogout()">Logout</a>
   </div>
 </div>
 

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3841c0d5-d2b8-4d45-8609-a106ca25f137" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +33,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Nisha/Summer2022/comp229(Web app prog)/comp_229_Sec_003_Group3_Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Nisha/Summer2022/comp229(Web app prog)/comp_229_Sec_003_Group3_Project/comp_229_Sec_003_Group3_Project&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -44,9 +45,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Nisha\Summer2022\comp229(Web app prog)\comp_229_Sec_003_Group3_Project\comp_229_Sec_003_Group3_Project" />
       <recent name="C:\Nisha\Summer2022\comp229(Web app prog)\comp_229_Sec_003_Group3_Project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Nisha\Summer2022\comp229(Web app prog)\comp_229_Sec_003_Group3_Project\comp_229_Sec_003_Group3_Project" />
       <recent name="C:\Nisha\Summer2022\comp229(Web app prog)\comp_229_Sec_003_Group3_Project\frontend\src" />
     </key>
   </component>
@@ -85,9 +88,13 @@
       <workItem from="1658006001229" duration="2529000" />
       <workItem from="1658012580404" duration="1336000" />
       <workItem from="1658080651457" duration="4040000" />
-      <workItem from="1658111796724" duration="2173000" />
-      <workItem from="1658286723711" duration="964000" />
-      <workItem from="1658289695744" duration="1269000" />
+      <workItem from="1658111796724" duration="219000" />
+      <workItem from="1659057104025" duration="7556000" />
+      <workItem from="1659205322925" duration="643000" />
+      <workItem from="1659205988231" duration="654000" />
+      <workItem from="1659206669104" duration="8109000" />
+      <workItem from="1659216503087" duration="6446000" />
+      <workItem from="1659287638706" duration="7925000" />
     </task>
     <servers />
   </component>
