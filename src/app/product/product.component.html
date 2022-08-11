@@ -1,3 +1,8 @@
+<!-- Products page
+Course : COMP_229_Sec_003
+Project Name - Group3 Project- Dream Cart : make your dreams affordable 
+Team Members: Hardip, Nisha, Navya, Vinny -->
+
 <div *ngFor="let product of productList">
   <div class="card justify-content-center m-4 align-center">
     <div>
@@ -10,9 +15,9 @@
           </div>
         </div>
         <div class="d-flex justify-content-between">
-          <p class="card-text">{{product.description}}
+          <p class="card-text" style="color:rgb(43, 138, 150);">{{product.description}}
             </p>
-          <span class="m-2 justify-content-end">${{product.amount }}</span>
+          <span class="m-2 text-success justify-content-end">${{product.amount }}</span>
         </div>
         <a href="#" class="btn btn-primary">Buy</a>
       </div>
