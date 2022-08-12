@@ -19,3 +19,21 @@ module.exports.addQuestion = (req, res, next) => {
       });
     });
 }
+
+
+module.exports.reply = (req, res, next) => {
+    const id = req.params.id;
+    QuestionModel.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Question not found. Question id : ${id}`,
+        });
+      } else {
+        res.send(data).status(200);
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({ message: "Error occurred while updating reply" });
+    });
+}
