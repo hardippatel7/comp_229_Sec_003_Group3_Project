@@ -6,6 +6,7 @@ let mongoose = require('mongoose');
 let productModel = mongoose.Schema(
     {
         name: String,
+        userId: String,
         description: String,
         amount: Number,
         status: String
