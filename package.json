@@ -19,6 +19,7 @@
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
+    "mongo-objectid": "^1.2.2",
     "mongoose": "^6.0.8",
     "morgan": "~1.9.1",
     "passport": "^0.5.0",
