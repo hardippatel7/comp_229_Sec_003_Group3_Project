@@ -42,10 +42,10 @@ module.exports.questionList = async(req, res, next)=> {
   let id = req.body.productId;
 
 await QuestionModel.find({ productId: id}).then((data) => {
-      console.log(data);
+      // console.log(data);
       if (!data) {
           res.status(404).send({
-          message: 'No data',
+          message: 'No questions available',
         });
       } else {
         res.send(data).status(200);
