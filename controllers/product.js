@@ -37,6 +37,7 @@ module.exports.addProduct = (req, res, next) => {
         name: req.body.name,
         description: req.body.description,
         amount: req.body.amount,
+        userId: req.body.userId,
         status: req.body.status
       });
       product.save(product).then((data) => {
