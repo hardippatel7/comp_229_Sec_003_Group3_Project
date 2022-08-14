@@ -1,6 +1,6 @@
 <!-- Products page
 Course : COMP_229_Sec_003
-Project Name - Group3 Project- Dream Cart : make your dreams affordable 
+Project Name - Group3 Project- Dream Cart : make your dreams affordable
 Team Members: Hardip, Nisha, Navya, Vinny -->
 
 <div *ngFor="let product of productList">
@@ -9,8 +9,8 @@ Team Members: Hardip, Nisha, Navya, Vinny -->
       <div class="card-body">
         <div class="d-flex justify-content-between">
           <h4 class="card-title">{{product.name}}</h4>
-          <div class="justify-content-end">
-            <span class="m-2" (click)="onTaskClick(product)"><i class="fa fa-pencil"></i></span>
+          <div *ngIf="onCheckUser(product)" class="justify-content-end">
+            <span  class="m-2" (click)="onTaskClick(product)"><i class="fa fa-pencil"></i></span>
             <span class="m-2" (click)="deleteTask(product)"><i class="fa fa-trash"></i></span>
           </div>
         </div>
@@ -19,7 +19,8 @@ Team Members: Hardip, Nisha, Navya, Vinny -->
             </p>
           <span class="m-2 text-success justify-content-end">${{product.amount }}</span>
         </div>
-        <a href="#" class="btn btn-primary">Buy</a>
+        <a href="#" class="m-1 btn btn-primary">Buy</a>
+        <a (click)="onViewProduct(product)" class="m-1 btn btn-primary">View</a>
       </div>
     </div>
   </div>

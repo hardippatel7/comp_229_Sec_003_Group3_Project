@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { AuthGuardService } from './auth/auth-guard.service';
+import { JwtModule } from '@auth0/angular-jwt';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { AuthGuardService } from './auth/auth-guard.service';
     ProductComponent,
     AddProductComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,12 @@ import { AuthGuardService } from './auth/auth-guard.service';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter:  () => localStorage.getItem('SessionUser')
+      }
+    })
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]

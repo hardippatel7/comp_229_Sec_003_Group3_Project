@@ -10,6 +10,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductComponent implements OnInit {
   productList: any;
+  userData: any;
   constructor(public productService: ProductService, public router: Router, public authService: AuthGuardService) { }
 
   ngOnInit(): void {
@@ -22,8 +23,20 @@ export class ProductComponent implements OnInit {
     })
   }
 
+  onCheckUser(product: any) {
+    this.userData = this.authService.getTokenData();
+    if(product._id === this.userData?.payload?.id)
+      return true;
+    else
+      return false;
+  }
+
   onTaskClick(product: any) {
     this.router.navigate(["edit-product/"+ product._id]);
+  }
+
+  onViewProduct(product: any) {
+    this.router.navigate(["product-detail/"+ product._id]);
   }
 
   deleteTask(product: any) {

@@ -7,12 +7,14 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistrationComponent } from './auth/registration/registration.component';
 import { AuthGuardGuard } from './auth/auth-guard.guard';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   {path: '', component : LandingComponent},
   {path: 'contact', component : ContactComponent},
   {path: 'about', component: AboutComponent},
   {path: 'add-product', canActivate:[AuthGuardGuard], component: AddProductComponent},
+  {path: 'product-detail/:id', canActivate:[AuthGuardGuard], component: ProductDetailComponent },
   { path: 'edit-product/:id', canActivate:[AuthGuardGuard], component: AddProductComponent },
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegistrationComponent},
