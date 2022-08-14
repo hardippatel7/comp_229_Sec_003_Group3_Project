@@ -4,7 +4,7 @@ Project Name - Group3 Project- Dream Cart : make your dreams affordable
 Team Members: Hardip, Nisha, Navya, Vinny -->
 
 <div *ngFor="let product of productList">
-  <div class="card justify-content-center m-4 align-center" *ngIf="product.status === 'active'">
+  <div class="card justify-content-center m-4 align-center" *ngIf="product.status === 'active' || onCheckUser(product)" >
     <div>
       <div class="card-body">
         <div class="d-flex justify-content-between">
