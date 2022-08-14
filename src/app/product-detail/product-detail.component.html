@@ -31,6 +31,30 @@ Team Members: Hardip, Nisha, Navya, Vinny -->
             <div class="justify-content-start">Reply:
               {{question?.reply}}
             </div>
+
+            <form
+              *ngIf="onCheckUser() && !question?.reply"
+              #replyForm="ngForm" (ngSubmit)="onReply(question, replyForm )"
+              class="justify-content-center m-auto w-400 d-flex mt-5 login-box"
+            >
+              <div class="new_user">
+                <div class="form-group mt-3">
+                  <label class="text-dark">Reply</label>
+                  <input
+                    type="text"
+                    name="reply"
+                    placeholder="Your reply here!"
+                    ngModel
+                  />
+                </div>
+
+                <div class="form-group bo d-flex justify-content-center mt-3">
+                  <button type="submit" class="btn btn-primary text-dark ">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -38,25 +62,17 @@ Team Members: Hardip, Nisha, Navya, Vinny -->
   </div>
   <!-- form handling -->
   <form
+    *ngIf="!onCheckUser()"
     #questionForm="ngForm" (ngSubmit)="addQuestion(questionForm)"
     class="justify-content-center m-auto w-400 d-flex mt-5 login-box"
   >
     <div class="new_user">
-      <div class="form-group" *ngIf="!onCheckUser()">
+      <div class="form-group">
         <label class="text-dark">Question</label>
-        <input type="text" name="question" placeholder="Name" ngModel/>
-      </div>
-      <div class="form-group mt-3" *ngIf="onCheckUser()">
-        <label class="text-dark">Reply</label>
-        <input
-          type="text"
-          name="reply"
-          placeholder="Your product description!"
-          ngModel
-        />
+        <input type="text" name="question" placeholder="Ask a question" ngModel/>
       </div>
 
-      <div class="form-group d-flex justify-content-center mt-3">
+      <div class="form-group bo d-flex justify-content-center mt-3">
         <button type="submit" class="btn btn-primary text-dark ">
           Send
         </button>

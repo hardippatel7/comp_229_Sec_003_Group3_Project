@@ -10,7 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './add-product/add-product.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistrationComponent } from './auth/registration/registration.component';
@@ -44,6 +44,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    ReactiveFormsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter:  () => localStorage.getItem('SessionUser')

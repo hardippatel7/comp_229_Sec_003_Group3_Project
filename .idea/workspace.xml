@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3841c0d5-d2b8-4d45-8609-a106ca25f137" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-product/add-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-product/add-product.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/add-product/add-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-product/add-product.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth/auth-guard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/auth-guard.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/product-detail/product-detail.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/product.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/product/product.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/product/product.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +103,7 @@
       <workItem from="1659206669104" duration="8109000" />
       <workItem from="1659216503087" duration="6446000" />
       <workItem from="1659287638706" duration="7925000" />
-      <workItem from="1660407800493" duration="16111000" />
+      <workItem from="1660407800493" duration="20310000" />
     </task>
     <servers />
   </component>

@@ -25,7 +25,7 @@ export class ProductComponent implements OnInit {
 
   onCheckUser(product: any) {
     this.userData = this.authService.getTokenData();
-    if(product._id === this.userData?.payload?.id)
+    if(product?.userId === this.userData?.payload?.id)
       return true;
     else
       return false;

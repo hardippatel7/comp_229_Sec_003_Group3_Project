@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
-import {FormGroup, FormsModule, NgForm} from '@angular/forms';
+import {FormControl, FormGroup, FormsModule, NgForm, Validators} from '@angular/forms';
 import { Router, ActivatedRoute} from '@angular/router';
 import { AuthGuardService } from '../auth/auth-guard.service';
 
@@ -12,19 +12,42 @@ import { AuthGuardService } from '../auth/auth-guard.service';
 export class AddProductComponent implements OnInit {
   id!: string;
   isEdit!: boolean;
-  loginForm!: FormGroup;
+  productForm!: FormGroup;
   btnName: string = "Save";
-  constructor(public productService: ProductService, public router: Router, public route:ActivatedRoute, public authService: AuthGuardService) { }
+  product: any;
+  constructor(public productService: ProductService,
+              public router: Router, public route:ActivatedRoute,
+              public authService: AuthGuardService
+              ) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     if(this.id) {
       this.isEdit = true;
       this.btnName = 'Update';
+       this.getProductData();
     } else {
       this.isEdit = false;
       this.btnName = 'Save';
     }
+    this.productForm = new FormGroup({
+      'name':  new FormControl(['', Validators.required]),
+      'description': new FormControl(['', Validators.required]),
+      'amount': new FormControl( ['', Validators.required]),
+      'status':new FormControl( ['', Validators.required]),
+    });
+  }
+
+  getProductData() {
+    this.productService.getProductData(this.id).subscribe((res) =>  {
+      this.product = res;
+      this.productForm.setValue({
+        name: this.product.name,
+        description: this.product.description,
+        amount: this.product.amount,
+        status: this.product.status
+      });
+    })
   }
 
   addData(value: any) {

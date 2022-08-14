@@ -42,4 +42,8 @@ export class ProductService {
     return this.http.post(`${this.baseUrl}/questions/add `, question);
   }
 
+  replyQuestion(id: string, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/questions/reply/${id}`, value);
+  }
+
 }

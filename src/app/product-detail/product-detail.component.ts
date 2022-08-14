@@ -48,9 +48,16 @@ export class ProductDetailComponent implements OnInit {
       userId: user?.payload?.id,
       productId: this.id,
       question: value?.value?.question,
-      reply: value?.value?.reply
+      reply: ''
     }
     this.productService.createQuestion(body)
+      .subscribe(response => {
+        this.router.navigate(["/"]);
+      })
+  }
+
+  onReply(id: any, replyForm: any) {
+    this.productService.replyQuestion(id._id, replyForm.value)
       .subscribe(response => {
         this.router.navigate(["/"]);
       })
