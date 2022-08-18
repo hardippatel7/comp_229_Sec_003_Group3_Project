@@ -37,11 +37,11 @@ export class AuthGuardService {
   }
 
   createUser(user: any): Observable<Object> {
-    return this.http.post(`${environment.apiurl}/register `, user);
+    return this.http.post(`${environment.apiurl}/users/register `, user);
   }
 
   login(user: any): Observable<Object> {
-    return this.http.post(`${environment.apiurl}/login `, user);
+    return this.http.post(`${environment.apiurl}/users/login `, user);
   }
 
 }
