@@ -6,9 +6,7 @@
     "start": "node server",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build && mv dist/* ."
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
