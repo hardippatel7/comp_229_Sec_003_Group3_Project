@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "preinstall": "npm install -g angular-cli",
@@ -24,6 +24,9 @@
     "@angular/router": "^14.0.0",
     "@auth0/angular-jwt": "^5.0.2",
     "bootstrap": "^5.1.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
     "font-awesome": "^4.7.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

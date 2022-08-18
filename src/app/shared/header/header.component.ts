@@ -25,7 +25,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   onLogout() {
-    this.authService.settoken("");
+    this.authService.settoken('');
     this.isUserLogin = false;
+    localStorage.clear();
   }
 }

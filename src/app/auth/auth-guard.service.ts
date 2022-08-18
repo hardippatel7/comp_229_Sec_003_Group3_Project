@@ -15,6 +15,7 @@ export class AuthGuardService {
   constructor(public http: HttpClient, private jwtHelper: JwtHelperService) { this.baseUrl = "https://comp229sec003group3backend.herokuapp.com/users"; }
 
   settoken(data: any){
+    debugger
     this.userSubject.next(localStorage.setItem("SessionUser", data));
   }
 
@@ -26,9 +27,9 @@ export class AuthGuardService {
   }
 
   getTokenData() {
-    if(localStorage.getItem("SessionUser")) {
-      this.tokenData = (localStorage.getItem("SessionUser"));
-      this.token = this.jwtHelper.decodeToken(this.tokenData);
+    this.tokenData = (localStorage.getItem("SessionUser"));
+      if(this.tokenData) {
+      this.token = this.jwtHelper?.decodeToken(this.tokenData);
       return this.token;
     }
     else

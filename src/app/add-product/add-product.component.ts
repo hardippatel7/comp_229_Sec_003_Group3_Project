@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../product.service';
 import {FormControl, FormGroup, FormsModule, NgForm, Validators} from '@angular/forms';
 import { Router, ActivatedRoute} from '@angular/router';
 import { AuthGuardService } from '../auth/auth-guard.service';
+import { Product } from '../model/product.model';
 
 @Component({
   selector: 'app-add-product',
@@ -10,11 +11,12 @@ import { AuthGuardService } from '../auth/auth-guard.service';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
+  @ViewChild('productForm') productForm: any;
   id!: string;
   isEdit!: boolean;
-  productForm!: FormGroup;
+  //productForm!: FormGroup;
   btnName: string = "Save";
-  product: any;
+  product?: Product;
   constructor(public productService: ProductService,
               public router: Router, public route:ActivatedRoute,
               public authService: AuthGuardService
@@ -41,18 +43,20 @@ export class AddProductComponent implements OnInit {
   getProductData() {
     this.productService.getProductData(this.id).subscribe((res) =>  {
       this.product = res;
-      this.productForm.setValue({
-        name: this.product.name,
-        description: this.product.description,
-        amount: this.product.amount,
-        status: this.product.status
-      });
+      if(this.product) {
+        this.productForm.setValue({
+          name: this.product.name,
+          description: this.product.description,
+          amount: this.product.amount,
+          status: this.product.status,
+        });
+      }
     })
   }
 
   addData(value: any) {
     let user = this.authService.getTokenData();
-    let body = {
+    this.product = {
       name: value.value.name,
       description: value.value.description,
       amount: value.value.amount,
@@ -60,12 +64,12 @@ export class AddProductComponent implements OnInit {
       userId: user?.payload?.id
     }
     if(this.isEdit) {
-      this.productService.updateProduct(this.id, body)
+      this.productService.updateProduct(this.id, this.product)
         .subscribe(response => {
           this.router.navigate(["/"]);
         })
     } else {
-      this.productService.createProduct(body)
+      this.productService.createProduct(this.product)
         .subscribe(response => {
           console.log(response)
           this.router.navigate(["/"]);
