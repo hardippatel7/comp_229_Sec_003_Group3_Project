@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable, ReplaySubject} from 'rxjs';
 import {HttpClient} from "@angular/common/http";
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,8 @@ export class AuthGuardService {
   userSubject = new ReplaySubject();
   token: any;
   tokenData: any;
-  readonly baseUrl;
 
-  constructor(public http: HttpClient, private jwtHelper: JwtHelperService) { this.baseUrl = "https://comp229sec003group3backend.herokuapp.com/users"; }
+  constructor(public http: HttpClient, private jwtHelper: JwtHelperService) {  }
 
   settoken(data: any){
     debugger
@@ -37,11 +37,11 @@ export class AuthGuardService {
   }
 
   createUser(user: any): Observable<Object> {
-    return this.http.post(`${this.baseUrl}/register `, user);
+    return this.http.post(`${environment.apiurl}/register `, user);
   }
 
   login(user: any): Observable<Object> {
-    return this.http.post(`${this.baseUrl}/login `, user);
+    return this.http.post(`${environment.apiurl}/login `, user);
   }
 
 }
